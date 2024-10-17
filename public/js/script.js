@@ -76,6 +76,19 @@ document.addEventListener('DOMContentLoaded', function() {
     checkInputs();
 });
 
+function togglePassword() { //hiding password
+    var passwordField = document.getElementById("password");
+    var toggleBtn = document.querySelector(".toggle-password");
+    
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+        toggleBtn.textContent = "Hide";
+    } else {
+        passwordField.type = "password";
+        toggleBtn.textContent = "Show";
+    }
+}
+
 /*function call_REST_API_Hello() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
