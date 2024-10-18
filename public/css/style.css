@@ -1,75 +1,117 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  
-  body {
-    background-color: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
-  
-  /* สไตล์คอนเทนเนอร์ของฟอร์ม */
-  .login-container {
-    background-color: #fff;
-    padding: 40px;
-    width: 350px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-  }
-  
-  .login-container h2 {
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  /* สไตล์ input ฟิลด์ */
-  .login-container input[type="text"],
-  .login-container input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .login-container input[type="text"]:focus,
-  .login-container input[type="password"]:focus {
-    outline: none;
-    border-color: #4A90E2;
-  }
-  
-  /* สไตล์ปุ่ม */
-  .login-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4A90E2;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .login-container button:hover {
-    background-color: #357ABD;
-  }
-  
-  /* สไตล์ลิงก์ */
-  .login-container .login-link {
-    display: block;
-    margin-top: 15px;
-    color: #4A90E2;
-    text-decoration: none;
-    font-size: 14px;
-  }
-  
-  .login-container .login-link:hover {
-    text-decoration: underline;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body {
+  background-color: #f7ec8d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.page-container {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; 
+  padding: 20px;
+}
+
+.login-container {
+  background-color: #f4f8f9;
+  border-radius: 15px;
+  padding: 20px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.result-container {
+  margin-top: 20px;
+  background-color: #f4f8f9;
+  border-radius: 15px;
+  padding: 20px;
+  width: 320px;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.result-container.show {
+  display: block;
+}
+
+.header {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#userNameDisplay {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box; 
+}
+
+.password-container{
+  position: relative;
+  width: 100%;
+}
+
+.toggle-password {
+  position: absolute; 
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%); 
+  cursor: pointer;
+  color: #e61364; 
+  margin-left: 10px;
+}
+
+.toggle-password:hover {
+  color: #fd012b; /* สีเมื่อ hover เมาส์ */
+}
+
+.dropdown-container {
+  text-align: left;
+  margin-top: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #f71919;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff5555;
+}
