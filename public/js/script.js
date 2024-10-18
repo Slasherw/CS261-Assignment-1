@@ -1,7 +1,7 @@
 function submitLogin() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-    const type = document.getElementById('role').value;
+    const role = document.getElementById('role').value;
 
     fetch('https://restapi.tu.ac.th/api/v1/auth/Ad/verify', {
         method: 'POST',
@@ -13,13 +13,11 @@ function submitLogin() {
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById('message').innerText = "";
         document.getElementById('message').innerText = data.message || 'Login successful!';
-        if (data.status) {
-            if(data.type == type){ //verify login
-                accountInfo(data);
-                document.getElementById('DisplayUsername').innerText = `Name: ${data.displayname_th || 'N/A'}`
-            } else if (data.type !== type){
+        if (data.status) { //verify login
+            if (data.type === role){
+                accountInfo(data); 
+            }else if (data.type !== role){
                 document.getElementById('message').innerText = 'Invalid Type!';
             }
         }
